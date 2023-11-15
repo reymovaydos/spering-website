@@ -1,12 +1,18 @@
-import { useState } from 'react'
 import './App.css'
-import { CounterComp } from './components/counter/counter'
-
+import { HomePage, AboutPage, CatergoryPage, WorkPage, Navbar } from './components';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 function App() {
-  const [count, setCount ] = useState(0)
   return (
     <div className='App'>
-      <CounterComp/>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/about' element={<AboutPage />} />
+          <Route path='/category' element={<CatergoryPage />} />
+          <Route path='/work' element={<WorkPage/>}/>
+        </Routes>
+      </Router>
     </div>
   )
 }

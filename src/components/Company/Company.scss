@@ -1,0 +1,45 @@
+@mixin DisplayFlex(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Company{
+    @include DisplayFlex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    img{
+        width: 60%;
+        @media (min-width: 480px) and (max-width: 768px){
+            width: 85%;
+        }
+    }
+    .Company-bottom{
+        h2{
+            font-family: 'Roboto';
+            margin-bottom: 20px;
+        }
+        p{
+            font-family: 'Roboto';
+            margin-bottom: 20px;
+            width: 90%;
+            font-size: 19px;
+            @media (min-width: 480px) and (max-width: 768px){
+               @include DisplayFlex;
+            }
+        }
+        .btn-read-more{
+            color: #fff;
+            background-color: #ff4f5a;
+            width: 150px;
+            height: 40px;
+            border: none;
+            font-family: 'Roboto';
+            &:hover{
+                background-color: transparent;
+                border: 1px solid #ff4f5a;
+                color: #ff4f5a;
+            }
+        }
+    }
+}

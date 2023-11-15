@@ -1,0 +1,120 @@
+@mixin DisplayFlex(){
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+.banner {
+    background: linear-gradient(60deg, #1d1a1a, rgb(7, 7, 222));
+    padding: 20px;
+    @include DisplayFlex;
+    justify-content: space-around;
+    @media (min-width: 480px) and (max-width: 768px){
+       flex-direction: column;
+    }
+    @media (min-width: 320px) and (max-width: 480px){
+        flex-direction: column;
+    }
+    @media (max-width: 320px){
+        flex-direction: column;
+    }
+    .banner-left{
+        .banner-content{
+            h1{
+                width: 40%;
+                margin-bottom: 25px;
+                color: #fff;
+                font-family: 'Roboto';
+                @media (min-width: 480px) and (max-width: 768px){
+                    display: flex;
+                    margin: 0 auto;
+                    margin-bottom: 10px;
+                }
+                @media (min-width: 320px) and (max-width: 480px){
+                    display: flex;
+                    margin: 0 auto;
+                    margin-bottom: 10px;
+                }
+                @media (max-width: 320px){
+                    display: flex;
+                    margin: 0 auto;
+                    width: 70%;
+                    margin-bottom: 10px;
+                }
+            }
+            p{
+                width: 85%;
+                margin-bottom: 25px;
+                color: #fff;
+                font-family: 'Roboto';
+                @media (min-width: 480px) and (max-width: 768px){
+                    width: 100%;
+                }
+                @media (min-width: 320px) and (max-width: 480px){
+                    width: 100%;
+                    text-align: center;
+                }
+                @media (max-width: 320px){
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+        .buttons{
+            display: flex;
+            column-gap: 20px;
+            @media (min-width: 480px) and (max-width: 768px){
+                @include DisplayFlex;
+                margin-bottom: 10px;
+            }
+            @media (max-width: 320px){
+                @include DisplayFlex;
+                column-gap: 10px;
+                margin-bottom: 10px;
+            }
+            .btn-about-us{
+                width: 150px;
+                height: 40px;
+                color: #fff;
+                background-color: #ff4f5a;
+                border: none;
+                font-family: 'Roboto';
+                font-size: 1rem;
+                &:hover{
+                    background-color: transparent;
+                    color: #ff4f5a;
+                    border: 1px solid #ff4f5a;
+                }
+                @media (max-width: 320px){
+                    width: 125px;
+                }
+            }
+            .btn-get-quote{
+                background-color: #fff;
+                border: none;
+                width: 150px;
+                height: 40px;
+                font-size: 1rem;
+                &:hover{
+                    color: #fff;
+                    background-color: transparent;
+                    border: 1px solid #fff;            
+                }
+                @media (max-width: 320px){
+                    width: 125px;
+                }
+            }   
+        }
+    }
+    .bg-image{
+        @include DisplayFlex;
+        img{
+            width: 75%;
+            @media (min-width: 480px) and (max-width: 768px){
+                width: 85%;
+            }
+            @media (max-width: 320px){
+                width: 100%;
+            }
+        }   
+    }
+}
