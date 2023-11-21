@@ -1,6 +1,7 @@
 export { HomePage } from './pages/home';
 export { AboutPage } from './pages/about';
 export { CatergoryPage } from './pages/catergory';
+export { } from './pages/NotFound'
 export { Navbar } from './Navbar/navbar';
 export { Banner } from './Banner/banner';
 export { WorkPage } from './pages/work';

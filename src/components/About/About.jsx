@@ -1,4 +1,4 @@
-import { Button } from '@mantine/core'
+import { Button } from '@mui/material'
 import AboutImg from '../../assets/images/experience-img.jpg'
 import './About.scss'
 export const About = () => {

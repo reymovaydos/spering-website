@@ -1,4 +1,4 @@
-import { Button } from '@mantine/core';
+import { Button } from '@mui/material';
 import './Company.scss';
 import CompanyImg from '../../assets/images/about-img.jpg'
 export const Company = () => {

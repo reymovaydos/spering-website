@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@mantine/core';
+import { Button } from '@mui/material';
 import { MDBCarousel, MDBCarouselItem } from 'mdb-react-ui-kit'
 import BannerImg from '../../assets/images/slider-img.png'
 import './banner.scss';
