@@ -1,1 +1,10 @@
-/*    /index.html   200
+
+If you see "Not Found" error while directly browsing to a specific path, For eg: https://yourdomain.com/something , this might be helpfull (ReactJS):
+
+In your public folder (folder which contains index.html) create a file called _redirects with no extension. Then, type the following inside it:
+
+/*    /index.html    200
+
+Now save, commit, push and publish. :)
+
+Reason for "Not Found" is because, when using router eg: React Router it ha
